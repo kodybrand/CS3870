@@ -1,0 +1,52 @@
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+.content {
+  margin-left: 170px;
+  text-align: center;
+  align-content: center;
+  padding: 1em;
+  overflow: hidden;
+}
+.titleBar {
+    font-family: Century, Arial;
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid
+}
+.name {
+    font-family: 'verdana';
+    color: black;
+    text-align: center;
+    font-style: italic
+}
+
+ul {
+  list-style-type: none;
+}
+
+.pageLinks {
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+
+.internTable {
+margin: 0 auto;
+}

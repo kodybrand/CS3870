@@ -1,0 +1,166 @@
+﻿.CS3870Title
+{
+    font-family: Century, Arial;
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid
+}
+
+/* this is a comment */ 
+.CS3870Name
+{
+    font-family: 'Calisto MT';
+    color: black;
+    text-align: center;
+    font-style: italic
+}
+
+.CS3870Assignment
+{
+    font-family: 'Times New Roman';
+    color: red;
+    text-align: center;
+    text-decoration: underline
+}
+
+.CS3870AssignmentLogin
+{
+    font-family: 'Times New Roman';
+    color: red;
+    text-decoration: underline
+}
+
+.MasterTitleWithLogin
+{
+    font-family: 'Times New Roman';
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+    width: 10%;
+    margin-left: 35%;
+}
+
+body
+{
+   padding-left: 11em;
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    width: 11em;
+    z-index: 1;
+}
+
+.insidenavbar {
+    list-style-type: none;
+    padding-left: 1em;
+    margin: 0
+}
+
+p.centerText
+{
+    text-align: center
+}
+
+h3.centerText
+{
+    text-align: center
+}
+
+.textPink
+{
+   color: lightpink;
+}
+
+td.textRed
+{
+   color: red;
+}
+
+td.textBlack
+{
+   color: black;
+}
+
+th.BigFont
+{
+   font-size: large;
+}
+
+.dataItem
+{
+   text-align: right
+}
+
+.rightAlign
+{
+   text-align: right
+}
+
+.centerAlign
+{
+   text-align: center
+}
+
+.centerWidth10PercentAndTextAlignRight
+{
+    z-index: 1;
+    display: block;
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    text-align: right
+}
+
+.centerWidth10PercentAndTextAlignCenter
+{
+    display: block;
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    text-align: center
+}
+
+.centerWidth40PercentAndTextAlignCenter
+{
+    z-index: 1;
+    display: block;
+    width: 40%;
+    margin: 0 30%;
+    text-align: center
+}
+
+.centerWidth80Percent
+{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.centerWidth50Percent
+{
+    display: block;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.centerWidth40Percent
+{
+    position:static;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+ 
+.center {
+    margin: auto;
+    width: 20%;
+}
