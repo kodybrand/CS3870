@@ -13,6 +13,7 @@
 
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Code that runs on application startup
+        SQLDataClass.setupProdAdapter()
     End Sub
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
@@ -31,7 +32,7 @@
         Session("Prog2_ProductTax") = ""
         Session("Prog2_ProductGrandTotal") = ""
         Session("Prog2_Computed") = False
-
+        Session(“Prog3_Index”) = 0
     End Sub
 
     Sub Session_End(ByVal sender As Object, ByVal e As EventArgs)
