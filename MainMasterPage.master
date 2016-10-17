@@ -1,0 +1,24 @@
+﻿<%@ Master Language="VB" CodeFile="MainMasterPage.master.vb" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UWP – CS 3870/CS 5870</title>
+    <link rel="stylesheet" type="text/css" href="../StyleSheet.css" />
+    <asp:ContentPlaceHolder id="MainHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form2" runat="server">
+        <h1 class="CS3870Title">Web Protocols, Technologies and Applications </h1>
+        <h2 class="CS3870Name">Kody Brand</h2>
+
+        <asp:ContentPlaceHolder id="MainBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </form>   
+</body>
+</html>

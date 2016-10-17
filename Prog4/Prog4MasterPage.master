@@ -1,0 +1,26 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog4MasterPage.master.vb" Inherits="Prog4_Prog4MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+        
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+    <h3>Prog 4</h3>
+    <asp:ContentPlaceHolder ID="Prog4Body" runat="server"></asp:ContentPlaceHolder>
+
+    <asp:TreeView ID="TreeView1" runat="server">
+        <Nodes>
+            <asp:TreeNode NavigateUrl="~/Prog4/Default.aspx" Text="All Products" Value="All Products"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/Prog4/Updating.aspx" Text="Updating" Value="Updating"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/Prog4/Shopping.aspx" Text="Shopping" Value="Shopping"></asp:TreeNode>
+        </Nodes>
+    </asp:TreeView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:UWPCS3870ConnectionString %>" 
+        DeleteCommand="DELETE FROM [Product] WHERE [ProductID] = @ProductID" 
+        InsertCommand="INSERT INTO [Product] ([ProductID], [ProductName], [UnitPrice], [Description]) VALUES (@ProductID, @ProductName, @UnitPrice, @Description)" 
+        SelectCommand="SELECT * FROM [Product] ORDER BY [ProductID]" 
+        UpdateCommand="UPDATE [Product] SET [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Description] = @Description WHERE [ProductID] = @ProductID">
+
+    </asp:SqlDataSource>
+</asp:Content>
+

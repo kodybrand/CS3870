@@ -5,6 +5,7 @@ Public Class SQLDataClass
            “Initial Catalog=UWPCS3870;Persist Security Info=True;” &
            “User ID=MSCS;Password=MasterInCS"
 
+
     Private Shared prodAdapter As System.Data.SqlClient.SqlDataAdapter
     Private Shared prodBuilder As System.Data.SqlClient.SqlDataAdapter
     Private Shared prodCmd As New Data.SqlClient.SqlCommand
