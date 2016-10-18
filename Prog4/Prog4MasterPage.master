@@ -14,13 +14,7 @@
             <asp:TreeNode NavigateUrl="~/Prog4/Shopping.aspx" Text="Shopping" Value="Shopping"></asp:TreeNode>
         </Nodes>
     </asp:TreeView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:UWPCS3870ConnectionString %>" 
-        DeleteCommand="DELETE FROM [Product] WHERE [ProductID] = @ProductID" 
-        InsertCommand="INSERT INTO [Product] ([ProductID], [ProductName], [UnitPrice], [Description]) VALUES (@ProductID, @ProductName, @UnitPrice, @Description)" 
-        SelectCommand="SELECT * FROM [Product] ORDER BY [ProductID]" 
-        UpdateCommand="UPDATE [Product] SET [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Description] = @Description WHERE [ProductID] = @ProductID">
-
-    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Product]" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>">
+</asp:SqlDataSource>
 </asp:Content>
 
