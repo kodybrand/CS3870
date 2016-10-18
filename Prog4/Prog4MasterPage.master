@@ -4,17 +4,34 @@
         
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
-    <h3>Prog 4</h3>
-    <asp:ContentPlaceHolder ID="Prog4Body" runat="server"></asp:ContentPlaceHolder>
+    <h3 class="center">Prog 4</h3>
+    
+   <asp:ContentPlaceHolder ID="Prog4Body" runat="server">
 
-    <asp:TreeView ID="TreeView1" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:TreeView ID="TreeView1" runat="server" CssClass="navbar">
         <Nodes>
             <asp:TreeNode NavigateUrl="~/Prog4/Default.aspx" Text="All Products" Value="All Products"></asp:TreeNode>
             <asp:TreeNode NavigateUrl="~/Prog4/Updating.aspx" Text="Updating" Value="Updating"></asp:TreeNode>
             <asp:TreeNode NavigateUrl="~/Prog4/Shopping.aspx" Text="Shopping" Value="Shopping"></asp:TreeNode>
         </Nodes>
     </asp:TreeView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Product]" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>">
-</asp:SqlDataSource>
-</asp:Content>
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" DeleteCommand="DELETE FROM [Product] WHERE [ProductID] = ?" InsertCommand="INSERT INTO [Product] ([ProductID], [ProductName], [UnitPrice], [Description]) VALUES (?, ?, ?, ?)" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT * FROM [Product] ORDER BY [ProductID]" UpdateCommand="UPDATE [Product] SET [ProductName] = ?, [UnitPrice] = ?, [Description] = ? WHERE [ProductID] = ?">
+      <DeleteParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+      </DeleteParameters>
+      <InsertParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Double" />
+         <asp:Parameter Name="Description" Type="String" />
+      </InsertParameters>
+      <UpdateParameters>
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Double" />
+         <asp:Parameter Name="Description" Type="String" />
+         <asp:Parameter Name="ProductID" Type="String" />
+      </UpdateParameters>
+    </asp:SqlDataSource>
+    </asp:Content>
 
