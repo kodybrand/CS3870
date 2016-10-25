@@ -50,6 +50,5 @@ Partial Class Prog4_Shopping
       txtTax.Text = (txtSubTotal.Text * 0.055).ToString("C")
       txtGrandTotal.Text = ((txtSubTotal.Text * 0.055) + txtSubTotal.Text).ToString("C")
 
-
    End Sub
 End Class

@@ -40,6 +40,13 @@
       Session("Prog4_UnitPrice") = 0
       Session("Prog4_ID") = ""
 
+      ' Prog5
+      Session("Prog5_PageIndex") = 0
+      Session("Prog5_RecordIndex") = 0
+      Session("Prog5_UnitPrice") = 0
+      Session("Prog5_ID") = ""
+      Session(“Prog5_Bag") = SQLDataClass.NewShoppingBag
+
 
 
    End Sub
