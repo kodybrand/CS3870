@@ -15,15 +15,15 @@ Public Class SQLDataClass
 
     ' Sets up the connection, command and adapter
     Public Shared Sub setupProdAdapter()
-        con.ConnectionString = ConStr
+        'con.ConnectionString = ConStr
 
-        prodCmd.Connection = con
-        prodCmd.CommandType = Data.CommandType.Text
-        prodCmd.CommandText = "Select * from Product order by ProductID"
+        'prodCmd.Connection = con
+        'prodCmd.CommandType = Data.CommandType.Text
+        'prodCmd.CommandText = "Select * from Product order by ProductID"
 
-        prodAdapter = New System.Data.SqlClient.SqlDataAdapter(prodCmd)
+        'prodAdapter = New System.Data.SqlClient.SqlDataAdapter(prodCmd)
 
-        prodAdapter.FillSchema(tblProducts, Data.SchemaType.Source)
+        'prodAdapter.FillSchema(tblProducts, Data.SchemaType.Source)
     End Sub
 
    Public Shared Sub getAllProducts()

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog7MasterPage.master.vb" Inherits="Prog7_Prog7MasterPage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+    <h3 style="position: relative; text-align: center">Prog 7</h3>
+    <asp:ContentPlaceHolder ID="Prog7Body" runat="server"></asp:ContentPlaceHolder>
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UWPCS3870ConnectionString %>" DeleteCommand="DELETE FROM [Product] WHERE [ProductID] = @ProductID" InsertCommand="INSERT INTO [Product] ([ProductID], [ProductName], [UnitPrice], [Description]) VALUES (@ProductID, @ProductName, @UnitPrice, @Description)" SelectCommand="SELECT * FROM [Product] ORDER BY [ProductID]" UpdateCommand="UPDATE [Product] SET [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Description] = @Description WHERE [ProductID] = @ProductID">
+      <DeleteParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+      </DeleteParameters>
+      <InsertParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Decimal" />
+         <asp:Parameter Name="Description" Type="String" />
+      </InsertParameters>
+      <UpdateParameters>
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Decimal" />
+         <asp:Parameter Name="Description" Type="String" />
+         <asp:Parameter Name="ProductID" Type="String" />
+      </UpdateParameters>
+   </asp:SqlDataSource>
+</asp:Content>
+
