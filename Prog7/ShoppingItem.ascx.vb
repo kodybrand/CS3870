@@ -1,5 +1,4 @@
-﻿
-Partial Class Prog7_ShoppingItem
+﻿Partial Class Prog7_ShoppingItem
    Inherits System.Web.UI.UserControl
 
    ' Private data
@@ -53,8 +52,7 @@ Partial Class Prog7_ShoppingItem
    End Property
 
    Private Sub Prog7_ShoppingItem_Load(sender As Object, e As EventArgs) Handles Me.Load
-      lblMsg.Text = ""
-
+      lblMessage.Text = ""
       txtID.Text = _theID
       txtName.Text = _theName
       txtPrice.Text = FormatCurrency(_thePrice)
@@ -62,4 +60,7 @@ Partial Class Prog7_ShoppingItem
       txtCost.Text = FormatCurrency(_theCost)
 
    End Sub
+
+   Public Event ItemChanged(ByVal item As Prog7_ShoppingItem, ByVal valid As Boolean)
+
 End Class

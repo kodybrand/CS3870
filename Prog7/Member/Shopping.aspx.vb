@@ -6,11 +6,17 @@ Partial Class Prog7_Member_Shopping
       Dim c1 As Prog7_ShoppingItem
       Dim bag As SortedList = Session("Prog7_Bag")
 
-      ' Specify file path to load the control
-      c1 = CType(LoadControl("../ShoppingItem.ascx"), Prog7_ShoppingItem)
-
       ' New works here
       c1 = New Prog7_ShoppingItem
+      c1.theID = txtID.Text
+      c1.theName = txtName.Text
+      c1.thePrice = txtPrice.Text
+      c1.theQuantity = txtQuanity.Text
+
+      bag.Remove(c1.theID)
+      bag.Add(c1.theID, c1)
+
+
    End Sub
 
    Private Sub btnCompute_Click(sender As Object, e As EventArgs) Handles btnCompute.Click
