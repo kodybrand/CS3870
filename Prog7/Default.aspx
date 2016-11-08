@@ -4,7 +4,6 @@
              TagPrefix="uc1" 
              TagName="ShoppingItem" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Prog7Body" Runat="Server">
    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" style="color:#333333;border-collapse:collapse;z-index: 1; position: relative; width: 50%; margin-left:25%; align-items: center; height: 176px" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" PageSize="5">
       <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -32,6 +31,6 @@
       <SortedDescendingCellStyle BackColor="#FFFDF8" />
       <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
    </asp:GridView>
-   <uc1:ShoppingItem ID="ShoppingItem1" runat="server" />
-</asp:Content>
+
+   </asp:Content>
 

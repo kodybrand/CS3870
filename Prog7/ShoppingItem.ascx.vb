@@ -1,6 +1,8 @@
 ﻿Partial Class Prog7_ShoppingItem
    Inherits System.Web.UI.UserControl
 
+   Public Event ItemChanged(ByVal item As Prog7_ShoppingItem, ByVal valid As Boolean)
+
    ' Private data
    Private _theID, _theName As String
    Private _thePrice, _theCost As Single
@@ -61,6 +63,19 @@
 
    End Sub
 
-   Public Event ItemChanged(ByVal item As Prog7_ShoppingItem, ByVal valid As Boolean)
+   Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.TextChanged
+      Dim q As Integer
+
+      If Integer.TryParse(txtQuantity.Text, q) And q >= 0 Then
+         'raise event
+         RaiseEvent ItemChanged(Me, True)
+      Else
+         RaiseEvent ItemChanged(Me, False)
+      End If
+
+   End Sub
+
+   
+
 
 End Class
