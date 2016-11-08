@@ -3,7 +3,6 @@
 
    Public Event ItemChanged(ByVal item As Prog7_ShoppingItem, ByVal valid As Boolean)
 
-   ' Private data
    Private _theID, _theName As String
    Private _thePrice, _theCost As Single
    Private _theQuantity As Integer
@@ -67,12 +66,15 @@
       Dim q As Integer
 
       If Integer.TryParse(txtQuantity.Text, q) And q >= 0 Then
-         'raise event
+         _theQuantity = q
+         _theCost = _thePrice * _theQuantity
+         txtCost.Text = FormatCurrency(_theCost)
          RaiseEvent ItemChanged(Me, True)
       Else
+         txtCost.Text = ""
+         lblMessage.Text = "Invalid!"
          RaiseEvent ItemChanged(Me, False)
       End If
-
    End Sub
 
    

@@ -1,5 +1,16 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog7/Prog7MasterPage.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="Prog7_Default" %>
-
+<script runat="server">
+'---------------------------------------------------------------------------------------------
+' Class      : CS 3870CS 5870
+'
+' Name       : Kody Brand 
+'
+' UserName   : brandk
+'
+' Description: Page has datagrid view on it and can be sorted and paged through
+'
+'---------------------------------------------------------------------------------------------
+</script>
 <%@ Register Src="~/Prog7/ShoppingItem.ascx" 
              TagPrefix="uc1" 
              TagName="ShoppingItem" %>

@@ -1,5 +1,16 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog7/Prog7MasterPage.master" AutoEventWireup="false" CodeFile="Shopping.aspx.vb" Inherits="Prog7_Member_Shopping" %>
-
+<script runat="server">
+'---------------------------------------------------------------------------------------------
+' Class      : CS 3870CS 5870
+'
+' Name       : Kody Brand 
+'
+' UserName   : brandk
+'
+' Description: Shopping page where you can enter a product and get grand total and you can add to cart.
+'
+'---------------------------------------------------------------------------------------------
+</script>
 <%@ MasterType VirtualPath="~/Prog7/Prog7MasterPage.master" %>
 <%@ Register Src="~/Prog7/ShoppingItem.ascx" 
              TagPrefix="uc1" 
