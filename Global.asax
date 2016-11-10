@@ -53,6 +53,10 @@
       Session("Prog7_ID") = ""
       Session("Prog7_Bag") = New SortedList
 
+      'TestTwo
+      Session("TestTwo_Bag") = New SortedList
+      Session("TestTwo_ID") = 0
+
 
 
 

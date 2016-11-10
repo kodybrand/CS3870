@@ -1,0 +1,16 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="TestTwoMasterPage.master.vb" Inherits="TestTwo_TestTwoMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+   <h4 class="centerAlign">Test Two</h4>
+   <asp:TreeView ID="TreeView1" runat="server" CssClass="navbar">
+      <Nodes>
+         <asp:TreeNode Text="All Courses" Value="All Courses" NavigateUrl="~/TestTwo/Default.aspx"></asp:TreeNode>
+         <asp:TreeNode Text="Total Credits" Value="Total Credits" NavigateUrl="~/TestTwo/Credits.aspx"></asp:TreeNode>
+      </Nodes>
+   </asp:TreeView>
+   <asp:ContentPlaceHolder ID="TestTwoProgBody" runat="server"></asp:ContentPlaceHolder>
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UWPCS3870ConnectionString %>" SelectCommand="SELECT * FROM [Course]"></asp:SqlDataSource>
+</asp:Content>
+
