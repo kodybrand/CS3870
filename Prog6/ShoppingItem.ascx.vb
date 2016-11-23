@@ -78,7 +78,7 @@ Partial Class Prog6_ShoppingItem
       txtPrice.Text = _thePrice
       txtName.Text = _theName
       txtQuantity.Text = _theQuantity
-      txtCost.Text = _theCost
+      txtCost.Text = FormatCurrency(_theCost)
       lblMessage.Text = _message
    End Sub
 
@@ -93,6 +93,7 @@ Partial Class Prog6_ShoppingItem
             _valid = False
          Else
             _theCost = _thePrice * quant
+            txtCost.Text = _theCost
             _theQuantity = quant
             _message = ""
             _valid = True
@@ -104,6 +105,7 @@ Partial Class Prog6_ShoppingItem
          _valid = False
       End If
       txtQuantity.Text = _theQuantity
+
       If _valid = True Then
          txtCost.Text = _theCost
       Else
