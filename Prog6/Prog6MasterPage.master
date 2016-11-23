@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog6MasterPage.master.vb" Inherits="Prog6_Prog6MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" runat="Server">
+   
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" runat="Server">
+   <h3 style="text-align: center; display: block">
+      <span style="float: left; display: inline-block;">
+         <asp:LoginName ID="LoginName1" runat="server"></asp:LoginName>
+      </span>
+      Prog 6
+      <span style="float: right; display: inline-block;">
+         <asp:LoginStatus ID="LoginStatus1" runat="server" />
+      </span>
+   </h3>
+
+   <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" CssClass="navbar"></asp:TreeView>
+   <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+   <asp:ContentPlaceHolder ID="Prog6Body" runat="server">
+   </asp:ContentPlaceHolder>
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AlphaConnectionString %>" SelectCommand="SELECT * FROM [Product]" DeleteCommand="DELETE FROM [Product] WHERE [ProductID] = @ProductID" InsertCommand="INSERT INTO [Product] ([ProductID], [ProductName], [UnitPrice], [Description]) VALUES (@ProductID, @ProductName, @UnitPrice, @Description)" UpdateCommand="UPDATE [Product] SET [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Description] = @Description WHERE [ProductID] = @ProductID">
+      <DeleteParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+      </DeleteParameters>
+      <InsertParameters>
+         <asp:Parameter Name="ProductID" Type="String" />
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Decimal" />
+         <asp:Parameter Name="Description" Type="String" />
+      </InsertParameters>
+      <UpdateParameters>
+         <asp:Parameter Name="ProductName" Type="String" />
+         <asp:Parameter Name="UnitPrice" Type="Decimal" />
+         <asp:Parameter Name="Description" Type="String" />
+         <asp:Parameter Name="ProductID" Type="String" />
+      </UpdateParameters>
+   </asp:SqlDataSource>
+</asp:Content>
+
