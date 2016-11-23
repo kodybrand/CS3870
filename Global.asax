@@ -47,6 +47,7 @@
       Session("Prog5_ID") = ""
       Session(“Prog5_Bag") = SQLDataClass.NewShoppingBag
 
+      'Prog7
       Session("Prog7_PageIndex") = 0
       Session("Prog7_RecordIndex") = 0
       Session("Prog7_UnitPrice") = 0
@@ -57,7 +58,12 @@
       Session("TestTwo_Bag") = New SortedList
       Session("TestTwo_ID") = 0
 
-
+      'Prog6
+      Session("Prog6_PageIndex") = 0
+      Session("Prog6_RecordIndex") = 0
+      Session("Prog6_UnitPrice") = 0
+      Session("Prog6_ID") = ""
+      Session("Prog6_Bag") = New SortedList
 
 
    End Sub

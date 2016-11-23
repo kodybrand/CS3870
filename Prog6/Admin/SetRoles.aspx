@@ -15,7 +15,7 @@
    <asp:Button ID="btnRemoveUserFromRole" runat="server" Text="Remove User From Fole" style="position: relative; width:19%; margin-left:0%" />
    <br /> <br />
 
-   <asp:DropDownList ID="lstRoles" runat="server" style="position: relative; width:15%; margin-left:20%"></asp:DropDownList> <asp:DropDownList ID="lstUsersInRoles" runat="server" style="position: relative; width:15%; margin-left:30%"></asp:DropDownList>
+   <asp:DropDownList ID="lstRoles" runat="server" style="position: relative; width:15%; margin-left:20%" AutoPostBack="True"></asp:DropDownList> <asp:DropDownList ID="lstUsersInRoles" runat="server" style="position: relative; width:15%; margin-left:30%"></asp:DropDownList>
    <br /> <br />
 
    <asp:TextBox ID="txtMessage" runat="server" style="position: relative; width:50%; margin-left:25%; height: 100px"></asp:TextBox>
