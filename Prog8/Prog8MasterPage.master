@@ -1,0 +1,20 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog8MasterPage.master.vb" Inherits="Prog8_Prog8MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+   <h3 style="text-align: center; display: block">Prog 8</h3>
+   
+   <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+   <asp:TreeView ID="TreeView1" runat="server" CssClass="navbar" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+
+   <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+   <asp:ContentPlaceHolder ID="Prog8Body" runat="server"></asp:ContentPlaceHolder>
+
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AlphaConnectionString %>" SelectCommand="SELECT * FROM [Assignment]"></asp:SqlDataSource>
+
+
+</asp:Content>
+

@@ -65,6 +65,10 @@
       Session("Prog6_ID") = ""
       Session("Prog6_Bag") = New SortedList
 
+      'Prog8
+      Session("Prog8_Index") = 0
+      Session("Prog8_Bag") = New SortedList
+
 
    End Sub
 

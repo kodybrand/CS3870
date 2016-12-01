@@ -3,7 +3,7 @@
 
    <siteMapNode url="" title=""  description="">
       <siteMapNode url="~/Prog5/" title="Prog 5"  description="" />
-      
+
       <siteMapNode url="~/Prog7/" title="Prog 7"  description="" />
 
       <siteMapNode url="" title="Prog 6"  description="">
@@ -18,6 +18,11 @@
             <siteMapNode url="~/Prog6/Member/Shopping.aspx" title="Shopping"  description="" />
             <siteMapNode url="~/Prog6/Member/Checkout.aspx" title="Checkout"  description="" />
          </siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="Prog 8"  description="">
+         <siteMapNode url="~/Prog8/Default.aspx" title="All Assignments"  description="" />
+         <siteMapNode url="~/Prog8/Grade.aspx" title="Your Grade"  description="" />
       </siteMapNode>
    </siteMapNode>
 
