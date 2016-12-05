@@ -1,5 +1,16 @@
 ﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog8MasterPage.master.vb" Inherits="Prog8_Prog8MasterPage" %>
-
+<script runat="server">
+'---------------------------------------------------------------------------------------------
+' Class      : CS 3870CS 5870
+'
+' Name       : Kody Brand 
+'
+' UserName   : brandk
+'
+' Description: The master page for Prog 8
+'
+'---------------------------------------------------------------------------------------------
+</script>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">

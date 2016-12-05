@@ -17,29 +17,31 @@ Public Class ScoreAndGrade
    ' determines the grade according to the computed percentage.
    Public Shared Sub ComputePercentageAndGrade(ByVal score As Integer, ByVal max As Integer,
                                                ByRef percentage As Single, ByRef grade As String)
-      percentage = max / score
+      percentage = (score / max)
 
       Select Case percentage
-         Case percentage > A_PERCENTAGE
+         Case > A_PERCENTAGE
             grade = "A"
-         Case percentage < A_PERCENTAGE And percentage > B_PLUS_PERCENTAGE
+         Case < A_PERCENTAGE And percentage >= A_MINUS_PERCENTAGE
             grade = "A-"
-         Case percentage < B_PLUS_PERCENTAGE And percentage > B_PERCENTAGE
+         Case < A_MINUS_PERCENTAGE And percentage >= B_PLUS_PERCENTAGE
             grade = "B+"
-         Case percentage < B_PERCENTAGE And percentage > B_MINUS_PERCENTAGE
+         Case < B_PLUS_PERCENTAGE And percentage >= B_PERCENTAGE
             grade = "B"
-         Case percentage < B_MINUS_PERCENTAGE And percentage > C_PLUS_PERCENTAGE
+         Case < B_PERCENTAGE And percentage >= B_MINUS_PERCENTAGE
             grade = "B-"
-         Case percentage < C_PLUS_PERCENTAGE And percentage > C_PERCENTAGE
+         Case < B_MINUS_PERCENTAGE And percentage >= C_PLUS_PERCENTAGE
             grade = "C+"
-         Case percentage < C_PERCENTAGE And percentage > C_MINUS_PERCENTAGE
+         Case < C_PLUS_PERCENTAGE And percentage >= C_PERCENTAGE
             grade = "C"
-         Case percentage < C_MINUS_PERCENTAGE And percentage > D_PLUS_PERCENTAGE
+         Case < C_PERCENTAGE And percentage >= C_MINUS_PERCENTAGE
             grade = "C-"
-         Case percentage < D_PLUS_PERCENTAGE And percentage > D_PERCENTAGE
+         Case < C_MINUS_PERCENTAGE And percentage >= D_PLUS_PERCENTAGE
             grade = "D+"
-         Case percentage < D_PERCENTAGE
+         Case < D_PLUS_PERCENTAGE And percentage >= D_PERCENTAGE
             grade = "D"
+         Case < D_PERCENTAGE
+            grade = "F"
       End Select
 
    End Sub

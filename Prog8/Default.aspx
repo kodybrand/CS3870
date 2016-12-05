@@ -1,4 +1,19 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog8/Prog8MasterPage.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="Prog8_Default" %>
+<script runat="server">
+'---------------------------------------------------------------------------------------------
+' Class      : CS 3870CS 5870
+'
+' Name       : Kody Brand 
+'
+' UserName   : brandk
+'
+' Description: The page allows users to add scores to the bag
+'
+'---------------------------------------------------------------------------------------------
+</script>
+<%@ Register Src="~/Prog8/ScoreToGrade.ascx" 
+             TagPrefix="uc1" 
+             TagName="ScoreToGrade" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Prog8Body" runat="Server">
 
@@ -36,11 +51,12 @@
 
       <Triggers>
          <asp:AsyncPostBackTrigger ControlID="lstAssignments" EventName="SelectedIndexChanged" />
+         <asp:AsyncPostBackTrigger ControlID="btnAddScore" EventName="Click" />
       </Triggers>
    </asp:UpdatePanel>
 
 
-   <asp:Button ID="bntAddScore" runat="server" Text="Add Score" Style="position: relative; top: -80px; width: 15%; margin-left: 42.5%" />
+   <asp:Button ID="btnAddScore" runat="server" Text="Add Score" Style="position: relative; top: -80px; width: 15%; margin-left: 42.5%" />
    <br />
    <br />
 
