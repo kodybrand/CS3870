@@ -1,0 +1,13 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Test3MasterPage.master.vb" Inherits="Ajax_Test3MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+   <h4 class="centerAlign">Test 3</h4>
+   <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+   <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" CssClass="navbar" ></asp:TreeView>
+   <asp:ContentPlaceHolder ID="Test3Body" runat="server"></asp:ContentPlaceHolder>
+   <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AlphaConnectionString %>" SelectCommand="SELECT * FROM [Employee]"></asp:SqlDataSource>
+   
+</asp:Content>

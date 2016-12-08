@@ -3,7 +3,7 @@ Partial Class TestTwo_Default
    Inherits System.Web.UI.Page
 
    Private Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
-      Session("TestTwo_ID") = DropDownList1.SelectedIndex
+      Session("Test3_ID") = DropDownList1.SelectedIndex
       DetailsView1.PageIndex = DropDownList1.SelectedIndex
 
    End Sub

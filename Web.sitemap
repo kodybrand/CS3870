@@ -10,7 +10,6 @@
          <siteMapNode url="~/Prog6/Default.aspx" title="All Products"  description="" />
          <siteMapNode url="" title="Admin"  description="">
             <siteMapNode url="~/Prog6/Admin/CreateUsers.aspx" title="Create Users"  description="" />
-            <siteMapNode url="~/Prog6/Admin/SetRoles.aspx" title="Set Roles"  description="" />
             <siteMapNode url="~/Prog6/Admin/Updating.aspx" title="Updating Products"  description="" />
          </siteMapNode>
 
@@ -24,6 +23,12 @@
          <siteMapNode url="~/Prog8/Default.aspx" title="All Assignments"  description="" />
          <siteMapNode url="~/Prog8/Grade.aspx" title="Your Grade"  description="" />
       </siteMapNode>
+      
+      <siteMapNode url="" title="Test 3"  description="">
+         <siteMapNode url="~/Ajax/Default.aspx" title="All Employees"  description="" />
+         <siteMapNode url="~/Prog6/Admin/SetRoles.aspx" title="Users and Roles"  description="" />
+      </siteMapNode>
+
    </siteMapNode>
 
 </siteMap>
