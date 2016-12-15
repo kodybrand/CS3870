@@ -1,0 +1,14 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="false" CodeFile="Prog9MasterPage.master.vb" Inherits="Prog9_Prog9MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainHead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainBody" Runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <h3 style="text-align: center; display: block">
+        Prog9 :<asp:ContentPlaceHolder ID="MasterTitle" runat="server"></asp:ContentPlaceHolder>
+    </h3>
+    <asp:TreeView ID="TreeView1" runat="server" CssClass="navbar" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    <asp:ContentPlaceHolder ID="Prog9Body" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+

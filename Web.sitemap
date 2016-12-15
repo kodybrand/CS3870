@@ -1,34 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 
-   <siteMapNode url="" title=""  description="">
-      <siteMapNode url="~/Prog5/" title="Prog 5"  description="" />
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="~/Prog5/" title="Prog 5"  description="" />
 
-      <siteMapNode url="~/Prog7/" title="Prog 7"  description="" />
+    <siteMapNode url="~/Prog7/" title="Prog 7"  description="" />
 
-      <siteMapNode url="" title="Prog 6"  description="">
-         <siteMapNode url="~/Prog6/Default.aspx" title="All Products"  description="" />
-         <siteMapNode url="" title="Admin"  description="">
-            <siteMapNode url="~/Prog6/Admin/CreateUsers.aspx" title="Create Users"  description="" />
-            <siteMapNode url="~/Prog6/Admin/Updating.aspx" title="Updating Products"  description="" />
-         </siteMapNode>
-
-         <siteMapNode url="" title="Member"  description="">
-            <siteMapNode url="~/Prog6/Member/Shopping.aspx" title="Shopping"  description="" />
-            <siteMapNode url="~/Prog6/Member/Checkout.aspx" title="Checkout"  description="" />
-         </siteMapNode>
+    <siteMapNode url="" title="Prog 6"  description="">
+      <siteMapNode url="~/Prog6/Default.aspx" title="All Products"  description="" />
+      <siteMapNode url="" title="Admin"  description="">
+        <siteMapNode url="~/Prog6/Admin/CreateUsers.aspx" title="Create Users"  description="" />
+        <siteMapNode url="~/Prog6/Admin/Updating.aspx" title="Updating Products"  description="" />
       </siteMapNode>
 
-      <siteMapNode url="" title="Prog 8"  description="">
-         <siteMapNode url="~/Prog8/Default.aspx" title="All Assignments"  description="" />
-         <siteMapNode url="~/Prog8/Grade.aspx" title="Your Grade"  description="" />
+      <siteMapNode url="" title="Member"  description="">
+        <siteMapNode url="~/Prog6/Member/Shopping.aspx" title="Shopping"  description="" />
+        <siteMapNode url="~/Prog6/Member/Checkout.aspx" title="Checkout"  description="" />
       </siteMapNode>
-      
-      <siteMapNode url="" title="Test 3"  description="">
-         <siteMapNode url="~/Ajax/Default.aspx" title="All Employees"  description="" />
-         <siteMapNode url="~/Prog6/Admin/SetRoles.aspx" title="Users and Roles"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Prog 8"  description="">
+      <siteMapNode url="~/Prog8/Default.aspx" title="All Assignments"  description="" />
+      <siteMapNode url="~/Prog8/Grade.aspx" title="Your Grade"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="Test 3"  description="">
+      <siteMapNode url="~/Ajax/Default.aspx" title="All Employees"  description="" />
+      <siteMapNode url="~/Prog6/Admin/SetRoles.aspx" title="Users and Roles"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Prog9/Default.aspx" title="Prog 9"  description="">
+
+      <siteMapNode url="" title="Admin"  description="">
+        <siteMapNode url="~/Prog9/Admin/Updating.aspx" title="Updating Products"  description="" />
       </siteMapNode>
 
-   </siteMapNode>
+      <siteMapNode url="" title="Member"  description="">
+        <siteMapNode url="~/Prog9/Member/AllProducts.aspx" title="All Products"  description="" />
+        <siteMapNode url="~/Prog9/Member/Shopping.aspx" title="Shopping"  description="" />
+        <siteMapNode url="~/Prog9/Member/Checkout.aspx" title="Checkout"  description="" />
+      </siteMapNode>
+
+    </siteMapNode>
+
+  </siteMapNode>
 
 </siteMap>
