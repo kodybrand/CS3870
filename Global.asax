@@ -72,6 +72,11 @@
       'Test3
       Session("Test3_ID") = 0
 
+      'Prog9
+      Session(“Prog9_WS") = New Object
+      Session("Prog9_WSName") = ""
+      Session(“Prog9_Index”) = 0
+
 
    End Sub
 

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://alpha.ion.uwplatt.edu/brandk" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://alpha.ion.uwplatt.edu/brandk" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://alpha.ion.uwplatt.edu/brandk">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_GetAllProducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_GetAllProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_GetAllProductsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_UpdateProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newPrice" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="newDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_UpdateProductResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_InsertProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_InsertProductResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WS_DeleteProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_DeleteProductResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetAllProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetAllProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_UpdateProductSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_UpdateProduct" />
+  </wsdl:message>
+  <wsdl:message name="WS_UpdateProductSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_UpdateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_InsertProductSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_InsertProduct" />
+  </wsdl:message>
+  <wsdl:message name="WS_InsertProductSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_InsertProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_DeleteProductSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_DeleteProduct" />
+  </wsdl:message>
+  <wsdl:message name="WS_DeleteProductSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_DeleteProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UWPCSSEWebService2016Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetAllProducts">
+      <wsdl:input message="tns:WS_GetAllProductsSoapIn" />
+      <wsdl:output message="tns:WS_GetAllProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_UpdateProduct">
+      <wsdl:input message="tns:WS_UpdateProductSoapIn" />
+      <wsdl:output message="tns:WS_UpdateProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_InsertProduct">
+      <wsdl:input message="tns:WS_InsertProductSoapIn" />
+      <wsdl:output message="tns:WS_InsertProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_DeleteProduct">
+      <wsdl:input message="tns:WS_DeleteProductSoapIn" />
+      <wsdl:output message="tns:WS_DeleteProductSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UWPCSSEWebService2016Soap" type="tns:UWPCSSEWebService2016Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetAllProducts">
+      <soap:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_UpdateProduct">
+      <soap:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_UpdateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_InsertProduct">
+      <soap:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_InsertProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_DeleteProduct">
+      <soap:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UWPCSSEWebService2016Soap12" type="tns:UWPCSSEWebService2016Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetAllProducts">
+      <soap12:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_UpdateProduct">
+      <soap12:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_UpdateProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_InsertProduct">
+      <soap12:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_InsertProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_DeleteProduct">
+      <soap12:operation soapAction="https://alpha.ion.uwplatt.edu/brandk/WS_DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UWPCSSEWebService2016">
+    <wsdl:port name="UWPCSSEWebService2016Soap" binding="tns:UWPCSSEWebService2016Soap">
+      <soap:address location="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UWPCSSEWebService2016Soap12" binding="tns:UWPCSSEWebService2016Soap12">
+      <soap12:address location="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

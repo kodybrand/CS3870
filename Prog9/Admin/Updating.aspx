@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog3/MasterPage.master" AutoEventWireup="false" CodeFile="Updating.aspx.vb" Inherits="Prog3_Updating" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog9/Prog9MasterPage.master" AutoEventWireup="false" CodeFile="Updating.aspx.vb" Inherits="Prog9_Admin_Updating" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server" >
-
-    <asp:Button ID="btnFirst" runat="server" Text="First" style="z-index: 1; position: relative; width: 10%; margin-left:22.5%; text-align: center"/>
+<asp:Content ID="Content1" ContentPlaceHolderID="Prog9Body" Runat="Server">
+       <asp:Button ID="btnFirst" runat="server" Text="First" style="z-index: 1; position: relative; width: 10%; margin-left:22.5%; text-align: center"/>
     <asp:Button ID="btnPrevious" runat="server" Text="Previous" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center" />
     <asp:Button ID="btnNext" runat="server" Text="Next" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center"/>
     <asp:Button ID="btnLast" runat="server" Text="Last" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center" />
@@ -25,7 +22,5 @@
     <br /><br /><br /><br />
     <asp:TextBox ID="txtMsg" runat="server" TextMode="MultiLine" style="height:200px;z-index: 1; position: relative; width: 40%; margin-left:30%"></asp:TextBox>
 <br />
-   <asp:Button ID="btnCompute" runat="server" Text="Compute" style="border-style:Solid;z-index: 1; position: relative; width: 15%; margin-left: 35%"  />
-   <asp:Button ID="btnAddToCart" runat="server" Text="Add To Cart" style="border-style:Solid;z-index: 1; position: relative; width: 15%; margin-left: 10%" />
 </asp:Content>
 
