@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog9/Prog9MasterPage.master" AutoEventWireup="false" CodeFile="Updating.aspx.vb" Inherits="Prog9_Admin_Updating" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Prog9Body" Runat="Server">
-       <asp:Button ID="btnFirst" runat="server" Text="First" style="z-index: 1; position: relative; width: 10%; margin-left:22.5%; text-align: center"/>
+
+   <asp:Button ID="btnFirst" runat="server" Text="First" style="z-index: 1; position: relative; width: 10%; margin-left:22.5%; text-align: center"/>
     <asp:Button ID="btnPrevious" runat="server" Text="Previous" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center" />
     <asp:Button ID="btnNext" runat="server" Text="Next" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center"/>
     <asp:Button ID="btnLast" runat="server" Text="Last" style="z-index: 1; position: relative; width: 10%; margin-left:5%; text-align: center" />
@@ -21,6 +22,6 @@
     <asp:Button ID="btnNew" runat="server" Text="New" style="z-index: 1; position: relative; width: 10%; margin-left:10%; text-align: center" />
     <br /><br /><br /><br />
     <asp:TextBox ID="txtMsg" runat="server" TextMode="MultiLine" style="height:200px;z-index: 1; position: relative; width: 40%; margin-left:30%"></asp:TextBox>
-<br />
+
 </asp:Content>
 

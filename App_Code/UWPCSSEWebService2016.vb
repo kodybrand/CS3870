@@ -4,7 +4,7 @@ Imports System.Web.Services.Protocols
 
 ' To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
 ' <System.Web.Script.Services.ScriptService()> _
-<WebService(Namespace:="https://alpha.ion.uwplatt.edu/brandk")>
+<WebService(Namespace:="https://alpha.ion.uwplatt.edu/brandk/")>
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Public Class UWPCSSEWebService2016
@@ -15,14 +15,13 @@ Public Class UWPCSSEWebService2016
       Return "Hello World"
    End Function
 
-   ' The method returns a DataTable that contains all records of table Product.
    <WebMethod()>
    Public Function WS_GetAllProducts() As Data.DataTable
+      SQLDataClass.setupProdAdapter()
       SQLDataClass.getAllProdcts()
       Return SQLDataClass.tblProducts
    End Function
 
-   ' The method modifies the record with ProductID being ID in table Product.
    <WebMethod()>
    Public Sub WS_UpdateProduct(ByVal ID As String, ByVal newName As String, ByVal newPrice As Double,
                                ByVal newDescription As String)

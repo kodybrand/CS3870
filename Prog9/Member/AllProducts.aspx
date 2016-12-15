@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Prog9/Prog9MasterPage.master" AutoEventWireup="false" CodeFile="AllProducts.aspx.vb" Inherits="Prog9_AllProducts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Prog9Body" Runat="Server">
-   <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="color:#333333;border-collapse:collapse;position: relative; width: 30%; margin-left: 33%">
+   <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" style="color:#333333;border-collapse:collapse;position: relative; width: 30%; margin-left: 33%" AllowPaging="False" PageSize="3">
       <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
       <EditRowStyle BackColor="#999999" />
       <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

@@ -5,16 +5,21 @@ Partial Class Prog9_Admin_Updating
    Dim myTable As Data.DataTable
 
    Private Sub Prog9_Admin_Updating_Load(sender As Object, e As EventArgs) Handles Me.Load
-      If Session("Prog9_WS") Is Nothing Then
-         Response.Redirect("~/Prog9/Default.aspx")
-      End If
-
       obj = Session(“Prog9_WS")
       myTable = obj.WS_GetAllProducts()
 
-      DisplayRow(Session(“Prog9_Index”))
-      ToggleButtons()
+      If Not IsPostBack Then
+         DisplayRow(Session(“Prog9_Index”))
+      End If
+      obj = Session(“Prog9_WS")
+
+      Dim c As Control = Master.Master.FindControl("form1")
+      c = c.FindControl("MainBody")
+      c = c.FindControl("Label1")
+      CType(c, Label).Text = Session("Prog9_WSName")
+
    End Sub
+
    Private Sub DisplayRow(Index As Integer)
       Dim row As Data.DataRow
       row = myTable.Rows(Index)
@@ -90,8 +95,46 @@ Partial Class Prog9_Admin_Updating
       Try
          obj.WS_UpdateProduct(row(0), txtName.Text,
                   txtPrice.Text, txtDescription.Text)
+         txtMsg.Text = "Record Updated"
       Catch ex As Exception
          txtMsg.Text = ex.Message
       End Try
+   End Sub
+
+   Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+      If btnNew.Text = "New" Then
+         txtID.Text = ""
+         txtName.Text = ""
+         txtPrice.Text = ""
+         txtDescription.Text = ""
+         btnUpdate.Enabled = False
+         btnDelete.Text = "Cancel"
+         btnNew.Text = "Save New"
+      Else
+         obj.WS_InsertProduct(txtID.Text, txtName.Text, txtPrice.Text, txtDescription.Text)
+         txtMsg.Text = "Record Inserted"
+         btnUpdate.Enabled = True
+         btnDelete.Text = "Delete"
+         btnNew.Text = "New"
+      End If
+
+   End Sub
+
+   Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+      If btnDelete.Text = "Cancel" Then
+         DisplayRow(Session(“Prog9_Index”))
+         btnUpdate.Enabled = True
+         btnDelete.Text = "Delete"
+      Else
+         Dim row As Data.DataRow
+         row = myTable.Rows(Session(“Prog9_Index”))
+         Try
+            obj.WS_DeleteProduct(row(0))
+            DisplayRow(myTable.Rows.Count - 1)
+            txtMsg.Text = "Record Deleted"
+         Catch ex As Exception
+            txtMsg.Text = ex.Message
+         End Try
+      End If
    End Sub
 End Class

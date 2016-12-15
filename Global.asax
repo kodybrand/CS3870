@@ -74,6 +74,7 @@
 
       'Prog9
       Session(“Prog9_WS") = New Object
+      Session("Prog9_Bag") = New SortedList
       Session("Prog9_WSName") = ""
       Session(“Prog9_Index”) = 0
 

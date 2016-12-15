@@ -19,8 +19,6 @@ Public Class SQLDataClass
    Public Shared Sub setupProdAdapter()
       con.ConnectionString = ConStr
 
-      'con.ConnectionString = "Data Source=~\App_Data\UWPCS3870.accdb"
-
       prodCmd.Connection = con
       prodCmd.CommandType = Data.CommandType.Text
       prodCmd.CommandText = "Select * from Product order by ProductID"
@@ -35,7 +33,6 @@ Public Class SQLDataClass
          setupProdAdapter()
       End If
 
-      ' Need to reset the command
       prodCmd.CommandText = "Select * from Product order by ProductID"
 
       Try
@@ -52,9 +49,6 @@ Public Class SQLDataClass
    End Sub
 
    Public Shared Sub UpdateProduct(theID As String, newName As String, newPrice As Double, newDesc As String)
-      If prodAdapter Is Nothing Then
-         setupProdAdapter()
-      End If
 
       ' Building SQL statement with variables
       prodCmd.CommandText = " Update Product" &
@@ -62,7 +56,6 @@ Public Class SQLDataClass
                                     "     UnitPrice   = " & newPrice & ", " &
                                     "     Description = '" & newDesc & "' " &
                                     " Where ProductID = '" & theID & "'"
-
       Try
          con.Open()
          prodCmd.ExecuteNonQuery()
