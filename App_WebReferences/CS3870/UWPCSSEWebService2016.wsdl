@@ -217,10 +217,10 @@
   </wsdl:binding>
   <wsdl:service name="UWPCSSEWebService2016">
     <wsdl:port name="UWPCSSEWebService2016Soap" binding="tns:UWPCSSEWebService2016Soap">
-      <soap:address location="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebService2016.asmx" />
+      <soap:address location="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebservice2016.asmx" />
     </wsdl:port>
     <wsdl:port name="UWPCSSEWebService2016Soap12" binding="tns:UWPCSSEWebService2016Soap12">
-      <soap12:address location="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebService2016.asmx" />
+      <soap12:address location="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebservice2016.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

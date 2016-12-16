@@ -9,9 +9,9 @@ Partial Class Prog3_Updating
 
     Private Sub DisplayRow(Index As Integer)
         Dim row As Data.DataRow
-        row = SQLDataClass.tblProducts.Rows(Index)
+      row = SQLDataClass.tblProduct.Rows(Index)
 
-        If (IsDBNull(row(0))) Then
+      If (IsDBNull(row(0))) Then
             txtID.Text = ""
         Else
             txtID.Text = row(0)
@@ -52,19 +52,19 @@ Partial Class Prog3_Updating
     End Sub
 
     Protected Sub btnLast_Click(sender As Object, e As EventArgs) Handles btnLast.Click
-        Session(“Prog3_Index”) = SQLDataClass.tblProducts.Rows.Count - 1
-        DisplayRow(Session(“Prog3_Index”))
+      Session(“Prog3_Index”) = SQLDataClass.tblProduct.Rows.Count - 1
+      DisplayRow(Session(“Prog3_Index”))
         ToggleButtons()
     End Sub
 
     Sub ToggleButtons()
-        If Session(“Prog3_Index”) = 0 Then
-            btnFirst.Enabled = False
-            btnPrevious.Enabled = False
-            btnNext.Enabled = True
-            btnLast.Enabled = True
-        ElseIf Session(“Prog3_Index") = SQLDataClass.tblProducts.Rows.Count - 1 Then
-            btnNext.Enabled = False
+      If Session(“Prog3_Index”) = 0 Then
+         btnFirst.Enabled = False
+         btnPrevious.Enabled = False
+         btnNext.Enabled = True
+         btnLast.Enabled = True
+      ElseIf Session(“Prog3_Index") = SQLDataClass.tblProduct.Rows.Count - 1 Then
+         btnNext.Enabled = False
             btnLast.Enabled = False
             btnFirst.Enabled = True
             btnPrevious.Enabled = True

@@ -3,7 +3,7 @@
              TagPrefix="uc1" 
              TagName="ShoppingItem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Prog9Body" Runat="Server">
-   <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+   <asp:Panel ID="Panel1" runat="server" style="position: relative; margin-left: 35%"></asp:Panel>
    <br /><br />
    <asp:TextBox ID="txtTotal" runat="server" ReadOnly="True" style="position: relative; width: 16%; margin-left: 42%; text-align: right"></asp:TextBox>
    <br /><br />

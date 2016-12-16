@@ -14,6 +14,7 @@
    Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
       ' Code that runs on application startup
       SQLDataClass.setupProdAdapter()
+
    End Sub
 
    Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
@@ -45,7 +46,7 @@
       Session("Prog5_RecordIndex") = 0
       Session("Prog5_UnitPrice") = 0
       Session("Prog5_ID") = ""
-      Session(“Prog5_Bag") = SQLDataClass.NewShoppingBag
+      'Session(“Prog5_Bag") = SQLDataClass.NewShoppingBag
 
       'Prog7
       Session("Prog7_PageIndex") = 0

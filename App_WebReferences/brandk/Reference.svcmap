@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91a8b445-f6e2-441a-8b6a-52a5e4a49b3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b5e364ff-6890-4fd3-8405-622e273dd122" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,11 +18,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebservice2016.asmx?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UWPCSSEWebService2016.wsdl" MetadataType="Wsdl" ID="339ad78b-04c5-4595-af51-2654ed26144e" SourceId="1" SourceUrl="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx?wsdl" />
-    <MetadataFile FileName="UWPCSSEWebService2016.disco" MetadataType="Disco" ID="6eac30a0-2b3e-4b1e-8c76-a34ce95c933e" SourceId="1" SourceUrl="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx?disco" />
+    <MetadataFile FileName="UWPCSSEWebservice2016.wsdl" MetadataType="Wsdl" ID="035389d9-96e5-4acd-90e4-759b31c5ac18" SourceId="1" SourceUrl="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebservice2016.asmx?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

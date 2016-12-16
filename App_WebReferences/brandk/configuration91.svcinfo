@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="18poII1N/cH+87DREXtLKXKhdgA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="LV0xR/xLce4dl8RieibBt089qKE=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="UWPCSSEWebService2016Soap4">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="UWPCSSEWebService2016Soap2" contract="brandk.UWPCSSEWebService2016Soap" bindingType="basicHttpBinding" address="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx" bindingConfiguration="UWPCSSEWebService2016Soap4">
+    <endpoint name="UWPCSSEWebService2016Soap2" contract="BrandK.UWPCSSEWebService2016Soap" bindingType="basicHttpBinding" address="https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebservice2016.asmx" bindingConfiguration="UWPCSSEWebService2016Soap4">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebService2016.asmx</serializedValue>
+          <serializedValue>https://alpha.ion.uwplatt.edu/brandk/UWPCSSEWebservice2016.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -236,7 +236,7 @@
           <serializedValue>UWPCSSEWebService2016Soap4</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>brandk.UWPCSSEWebService2016Soap</serializedValue>
+          <serializedValue>BrandK.UWPCSSEWebService2016Soap</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

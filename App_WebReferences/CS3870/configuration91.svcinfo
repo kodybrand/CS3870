@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Ml05gSiBXpka+BCqfY9C1MBdtUU=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="IgyPESk/o1IvaQiZteXZdEa3ZF0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="UWPCSSEWebService2016Soap">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="UWPCSSEWebService2016Soap" contract="CS3870.UWPCSSEWebService2016Soap" bindingType="basicHttpBinding" address="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebService2016.asmx" bindingConfiguration="UWPCSSEWebService2016Soap">
+    <endpoint name="UWPCSSEWebService2016Soap" contract="CS3870.UWPCSSEWebService2016Soap" bindingType="basicHttpBinding" address="https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebservice2016.asmx" bindingConfiguration="UWPCSSEWebService2016Soap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebService2016.asmx</serializedValue>
+          <serializedValue>https://alpha.ion.uwplatt.edu/CS3870/UWPCSSEWebservice2016.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

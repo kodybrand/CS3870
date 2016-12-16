@@ -15,8 +15,7 @@ Partial Class Prog9_Member_Checkout
          c1.theName = c.TheName
          c1.ThePrice = FormatCurrency(c.ThePrice)
          c1.TheQuantity = c.TheQuantity
-         c1.TheCost = FormatCurrency(c.ThePrice * c.TheQuantity)
-         total += c1.TheCost
+         total += c.ThePrice * c.TheQuantity
          If c1.Valid = False Then
             allValid = False
          End If
@@ -39,25 +38,30 @@ Partial Class Prog9_Member_Checkout
       Dim c As Prog9_ShoppingItem
       Dim AllValid As Boolean = True
 
-      Dim total As Integer = 0
-      For i = 0 To bag.Count - 1
-         c = bag.GetByIndex(i)
-         If item.Valid Then
-            c.TheQuantity = item.TheQuantity
-            c.TheCost = FormatCurrency(item.ThePrice * item.TheQuantity)
-            total += c.TheCost
+      Dim grandTotal As Single = 0
+
+      For index = 0 To bag.Count - 1
+         c = bag.GetByIndex(index)
+
+         If c.TheID = item.TheID Then
+            c.Valid = item.Valid
+            c.TheMessage = item.TheMessage
          End If
-         If item.Valid = False Then
+
+         If c.Valid Then
+            grandTotal += c.ThePrice * c.TheQuantity
+         Else
             AllValid = False
          End If
       Next
 
+      Session("Prog9_Bag") = bag
+
       If AllValid Then
-         txtTotal.Text = FormatCurrency(total)
+         txtTotal.Text = FormatCurrency(grandTotal)
       Else
          txtTotal.Text = ""
       End If
-
    End Sub
 
    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click

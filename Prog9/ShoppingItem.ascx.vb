@@ -1,11 +1,9 @@
 ﻿
 Partial Class Prog9_ShoppingItem
    Inherits System.Web.UI.UserControl
-   Private _theID, _theName, _thePrice, _message As String
-   Private _theCost As Single
+   Private _theID, _theName, _thePrice, _theMessage As String
    Private _theQuantity As String
-
-   Private _valid As Boolean = True
+   Private _theValid As Boolean = True
 
    Public Event ItemChanged(ByVal x As Prog9_ShoppingItem)
 
@@ -44,30 +42,22 @@ Partial Class Prog9_ShoppingItem
       End Set
    End Property
 
-   Public Property TheCost As Single
-      Get
-         Return _theCost
-      End Get
-      Set(value As Single)
-         _theCost = value
-      End Set
-   End Property
 
    Public Property Valid As Boolean
       Get
-         Return _valid
+         Return _theValid
       End Get
       Set(value As Boolean)
-         _valid = value
+         _theValid = value
       End Set
    End Property
 
    Public Property TheMessage As String
       Get
-         Return _message
+         Return _theMessage
       End Get
       Set(value As String)
-         _message = value
+         _theMessage = value
       End Set
    End Property
 
@@ -77,42 +67,31 @@ Partial Class Prog9_ShoppingItem
       txtPrice.Text = _thePrice
       txtName.Text = _theName
       txtQuantity.Text = _theQuantity
-      txtCost.Text = FormatCurrency(_theCost)
-      lblMessage.Text = _message
+      lblMessage.Text = _theMessage
    End Sub
 
    Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.TextChanged
       Dim quant As Integer
 
-      If Integer.TryParse(txtQuantity.Text, quant) Then
-         If quant <= 0 Then
-            _theQuantity = txtQuantity.Text
-            _theCost = 0
-            _message = "Invalid Quantity!"
-            _valid = False
-         Else
-            _theCost = _thePrice * quant
-            txtCost.Text = _theCost
-            _theQuantity = quant
-            _message = ""
-            _valid = True
-         End If
+      If Integer.TryParse(txtQuantity.Text, quant) And (quant > 0) Then
+         _theValid = True
+         _theMessage = ""
+         _theQuantity = quant
+         lblMessage.Text = _theMessage
+         txtPrice.Text = _thePrice
+         txtQuantity.Text = _theQuantity
+         txtCost.Text = _theQuantity * _thePrice
+         RaiseEvent ItemChanged(Me)
       Else
-         _theQuantity = txtQuantity.Text
-         _theCost = 0
-         _message = "Invalid Quantity!"
-         _valid = False
-      End If
-      txtQuantity.Text = _theQuantity
-
-      If _valid = True Then
-         txtCost.Text = _theCost
-      Else
+         _theValid = False
+         _theMessage = "Invalid Quantity!"
+         _theQuantity = quant
+         lblMessage.Text = _theMessage
+         txtPrice.Text = _thePrice
+         lblMessage.Text = _theMessage
          txtCost.Text = ""
+         RaiseEvent ItemChanged(Me)
       End If
-      lblMessage.Text = _message
-
-      RaiseEvent ItemChanged(Me)
 
    End Sub
 End Class
